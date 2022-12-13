@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LHL</title>
+  
+  <subtitle>Lihanlin 的 Hexo 博客。</subtitle>
+  <link href="https://blog.lihanlin.cyou/atom.xml" rel="self"/>
+  
+  <link href="https://blog.lihanlin.cyou/"/>
+  <updated>2022-11-25T13:40:00.000Z</updated>
+  <id>https://blog.lihanlin.cyou/</id>
+  
+  <author>
+    <name>Lihanlin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自然主义整合包MCBBS主题帖网页截图</title>
+    <link href="https://blog.lihanlin.cyou/Minecraft/3a51774e4536/"/>
+    <id>https://blog.lihanlin.cyou/Minecraft/3a51774e4536/</id>
+    <published>2022-11-25T13:40:00.000Z</published>
+    <updated>2022-11-25T13:40:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>可恶的MCBBS中文论坛不登录就不给看帖子是吧，劳资偏要让大家都能看到这个贴的内容！</p><span id="more"></span><p><img src="/images/naturalism-mcbbs_webclip/1.jpeg"><br><img src="/images/naturalism-mcbbs_webclip/2.jpeg"><br><img src="/images/naturalism-mcbbs_webclip/3.jpeg"><br><img src="/images/naturalism-mcbbs_webclip/4.jpeg"><br><img src="/images/naturalism-mcbbs_webclip/5.jpeg"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;可恶的MCBBS中文论坛不登录就不给看帖子是吧，劳资偏要让大家都能看到这个贴的内容！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Minecraft" scheme="https://blog.lihanlin.cyou/categories/Minecraft/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一些实用的Python脚本</title>
+    <link href="https://blog.lihanlin.cyou/Python/Tool/902e543f34c7/"/>
+    <id>https://blog.lihanlin.cyou/Python/Tool/902e543f34c7/</id>
+    <published>2022-09-30T06:25:14.000Z</published>
+    <updated>2022-09-30T06:25:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里持续更新，存放一些非常实用的 Python 脚本。</p><span id="more"></span><h2 id="批量创建（多级）目录"><a href="#批量创建（多级）目录" class="headerlink" title="批量创建（多级）目录"></a>批量创建（多级）目录</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># bulknewDirs.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">file_path=os.path.abspath(<span class="string">r&quot;C:\sample\createDirs&quot;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;dirs.txt&quot;</span>, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&#x27;utf8&#x27;</span>) <span class="keyword">as</span> dirs:</span><br><span class="line">  dirsl = dirs.read().split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;secdirs.txt&quot;</span>, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&#x27;utf8&#x27;</span>) <span class="keyword">as</span> secdirs:</span><br><span class="line">  secdirsl = secdirs.read().split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(dirsl)):</span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(secdirsl)):</span><br><span class="line">    file_name=file_path + <span class="string">&quot;\\&quot;</span> + dirsl[i] + <span class="string">&quot;\\&quot;</span> + secdirsl[j]</span><br><span class="line">    os.makedirs(file_name)</span><br><span class="line">  <span class="built_in">print</span>(dirsl[i] + <span class="string">&#x27;is OK!&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;OK&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># dirs.txt 一级目录目录名列表</span><br><span class="line"></span><br><span class="line">sample1</span><br><span class="line">sample2</span><br><span class="line">sample3</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># secdirs.txt 二级目录目录名列表</span><br><span class="line"></span><br><span class="line">examples</span><br><span class="line">samples</span><br><span class="line">tests</span><br><span class="line">cases</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里持续更新，存放一些非常实用的 Python 脚本。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://blog.lihanlin.cyou/categories/Python/"/>
+    
+    <category term="Tool" scheme="https://blog.lihanlin.cyou/categories/Python/Tool/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用socat加速海外MC服务器的连接</title>
+    <link href="https://blog.lihanlin.cyou/Minecraft/f6a3fed82034/"/>
+    <id>https://blog.lihanlin.cyou/Minecraft/f6a3fed82034/</id>
+    <published>2022-09-15T08:50:16.000Z</published>
+    <updated>2022-09-15T08:50:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>直接与一些知名海外Minecraft服务器进行连接，通常都是有极高的Ping值和极不稳定的丢包等情况出现，严重影响了我们游玩这些服务器。</p><span id="more"></span><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>首先需要去挑选并购买线路不错的海外或出海VPS。配置系统为linux（本文以Ubuntu 22.04举例）。</p><h2 id="配置加速服务器"><a href="#配置加速服务器" class="headerlink" title="配置加速服务器"></a>配置加速服务器</h2><p>按照下述步骤对加速服务器进行配置：</p><ol><li>终端执行<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install -y socat</span><br></pre></td></tr></table></figure>安装socat</li><li>通过命令<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socat TCP4-LISTEN:25565,reuseaddr,fork TCP4:mc.hypixel.net:25565</span><br></pre></td></tr></table></figure>运行socat。</li><li>结合screen使socat保持后台运行。</li></ol><h2 id="客户端连接服务器"><a href="#客户端连接服务器" class="headerlink" title="客户端连接服务器"></a>客户端连接服务器</h2><p>打开游戏的电脑上的hosts文件，将游戏服务器原始域名（如mc.hypixel.net）指向刚刚的加速服务器的IP。<br>打开MC，使用<code>mc.hypixel.net:25565</code>连接到服务器，此时你所有与游戏服务器连接的流量都是经过你配置的加速服务器转发了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;直接与一些知名海外Minecraft服务器进行连接，通常都是有极高的Ping值和极不稳定的丢包等情况出现，严重影响了我们游玩这些服务器。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Minecraft" scheme="https://blog.lihanlin.cyou/categories/Minecraft/"/>
+    
+    
+  </entry>
+  
+</feed>
